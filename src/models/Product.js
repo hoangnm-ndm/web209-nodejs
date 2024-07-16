@@ -12,13 +12,9 @@ const productSchema = new mongoose.Schema(
 		},
 		description: {
 			type: String,
-			default: "Mo ta dang dk cap nhat!",
 		},
 	},
-	{
-		timestamps: true,
-		versionKey: false,
-	}
+	{ timestamps: true, versionKey: false }
 );
 
 export default mongoose.model("Product", productSchema);

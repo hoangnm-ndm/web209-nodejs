@@ -1,16 +1,19 @@
 {
 	"name": "nodejs-web209",
 	"version": "1.0.0",
-	"description": "hoc nodejs vs thay hoang",
+	"description": "hoc lap trinh voi thay hoang",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon --experimental-specifier-resolution=node index.js"
+		"start": "nodemon index.js"
 	},
 	"keywords": [
 		"nodejs",
-		"fpoly"
+		"fpoly",
+		"hoc",
+		"lap",
+		"trinh"
 	],
 	"author": "hoangnm",
 	"license": "MIT",

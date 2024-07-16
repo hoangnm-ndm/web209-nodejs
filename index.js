@@ -1,30 +1,24 @@
 import express from "express";
 
 import cors from "cors";
-
-import dotenv from "dotenv";
-import router from "./src/routes";
 import mongoose from "mongoose";
-
-dotenv.config();
-
-const { PORT, DB_URI } = process.env;
+import router from "./src/routes/index.js";
+// cross origin resource sharing
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
 mongoose
-	.connect(DB_URI)
+	.connect(`mongodb://localhost:27017/wd18334`)
 	.then(() => {
-		console.log("connect db thanh cong roi!");
+		console.log(`connect db thanh cong roi!`);
 	})
-	.catch((err) => {
-		console.log(err);
-	});
+	.catch((err) => console.log(err));
 
 app.use("/api", router);
 
-app.listen(PORT | 8000, () => {
-	console.log(`server is running on port ${PORT | 8000}`);
+app.listen(8000, () => {
+	`server is running on port 8000`;
 });
